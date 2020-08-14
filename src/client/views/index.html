@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>News Article Analysis</title>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				News Article Analysis
+			</div>
+			<nav class="nav">
+				<a class="nav__item" href="#">Contact Us</a>
+			</nav>
+		</header>
+
+		<main>
+			<section id="form">
+				<form onsubmit="return Client.handleSubmit(event)">
+					<input type="text" name="url" id="url" placeholder="Enter Article URL" />
+					<button
+						id="submit-btn"
+						onclick="return Client.handleSubmit(event)"
+						onsubmit="return Client.handleSubmit(event)"
+					>
+						Analysis
+					</button>
+				</form>
+			</section>
+
+			<section id="results">
+				<strong>Analysis Results:</strong>
+				<table class="results__table">
+					<tr>
+						<td class="result__title">Agreement</td>
+						<td id="agreement" class="result__value">-</td>
+					</tr>
+					<tr>
+						<td class="result__title">Subjectivity</td>
+						<td id="subjectivity" class="result__value">-</td>
+					</tr>
+					<tr>
+						<td class="result__title">Confidence</td>
+						<td id="confidence" class="result__value">-</td>
+					</tr>
+				</table>
+			</section>
+		</main>
+
+		<script>
+			// Check that service workers are supported
+			if ("serviceWorker" in navigator) {
+				// Use the window load event to keep the page load performant
+				window.addEventListener("load", () => {
+					navigator.serviceWorker.register("/service-worker.js");
+				});
+			}
+		</script>
+	</body>
+</html>

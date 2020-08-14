@@ -1,0 +1,8 @@
+.nav {
+	display: flex;
+
+	&__item {
+		font-weight: bold;
+		border-bottom: 2px solid $color-green;
+	}
+}

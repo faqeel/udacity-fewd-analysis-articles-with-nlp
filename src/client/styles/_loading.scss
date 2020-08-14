@@ -1,0 +1,53 @@
+.loading {
+	display: block;
+	margin: auto;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #fff;
+	animation: loading 1s infinite linear alternate;
+	animation-delay: 0.5s;
+
+	&::before,
+	&::after {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		top: 0;
+	}
+
+	&::before {
+		left: -15px;
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+		background-color: #fff;
+		color: #fff;
+		animation: loading 1s infinite alternate;
+		animation-delay: 0s;
+	}
+
+	&::after {
+		left: 15px;
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+		background-color: #fff;
+		color: #fff;
+		animation: loading 1s infinite alternate;
+		animation-delay: 1s;
+	}
+}
+
+@keyframes loading {
+	0% {
+		background-color: $color-red;
+	}
+
+	50%,
+	100% {
+		background-color: lighten(#fff, 20%);
+	}
+}

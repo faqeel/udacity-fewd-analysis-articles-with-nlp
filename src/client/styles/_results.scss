@@ -1,0 +1,25 @@
+#results {
+	width: 100%;
+	background-color: rgb(242, 244, 246);
+	border-radius: 3px;
+	padding: 40px;
+
+	strong {
+		font-weight: 500;
+	}
+
+	.results__table {
+		margin-top: 1rem;
+		.result__title {
+			width: 20%;
+			padding: 1rem;
+			padding-left: 0;
+		}
+
+		.result__value {
+			font-weight: 500;
+			padding: 1rem;
+			padding-left: 0;
+		}
+	}
+}

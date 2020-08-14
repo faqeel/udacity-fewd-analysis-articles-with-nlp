@@ -1,0 +1,14 @@
+.alert {
+	width: 100%;
+	padding: 1rem;
+	border-radius: 4px;
+	margin: 1rem 0;
+	font-size: 0.875rem;
+	font-weight: 500;
+
+	&__error {
+		background-color: rgba(255, 84, 112, 0.1);
+		border: 1px solid $color-red;
+		color: $color-red;
+	}
+}
